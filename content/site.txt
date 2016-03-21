@@ -1,0 +1,33 @@
+Title: Co-creation and the museum - How to Not Do It Yourself
+
+----
+
+Author: Waag Society
+
+----
+
+Description: Co-creation and the museum - How to Not Do It Yourself
+
+----
+
+Keywords: 
+
+----
+
+Copyright: (link:http://creativecommons.org/licenses/by-nc/4.0/  text: This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License) 2015-(date: Year) <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" />
+
+----
+
+Footerimage: rch_logo_lscape_small.png
+
+----
+
+Headerimage: waag-logo-co-create-gray.png
+
+----
+
+Displayheader: 1
+
+----
+
+Headertext: Co-Creation

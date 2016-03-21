@@ -1,0 +1,21 @@
+Title: Home
+
+----
+
+Text: Co-creation starts from the idea that everyone is an expert on one issue or another, first and foremost on their own life. Co-creation can enrich the stories a museum tells and change the way a museum programs its events. This website was made especially for heritage professionals and hopes to inspire you with good practices and concrete tools to start thinking about co-creation in an informed and concrete way. Enjoy the site and please leave your thoughts and ideas in the comments sections!
+
+----
+
+Button: Read more
+
+----
+
+Buttonurl: #group2
+
+----
+
+Posttitle: Co-creation
+
+----
+
+Poloimage: polo01.png

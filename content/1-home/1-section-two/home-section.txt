@@ -1,0 +1,25 @@
+Title: What’s at stake?
+
+----
+
+Button: Try For Yourself!
+
+----
+
+Text: How do you create an open and creative environment? How do you build trust? Are you willing to share responsibility and ownership in your project? Can you let go of a set outcome and embrace unexpected ideas? Extremely relevant issues that can not be tackled with a simple one-size-fits-all yes or no answer. Five main values drive co-creation and address these issues. They are at the core of creating an inspiring and creative process.
+
+----
+
+Buttonurl: http://localhost/RICHES-website-kirby/kirby-2.1.1/articles
+
+----
+
+Poloimage: polo02.png
+
+----
+
+Sectiontwo: 1
+
+----
+
+Sectionthree: 

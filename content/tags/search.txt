@@ -1,0 +1,13 @@
+Title: Tags
+
+----
+
+Nosearch: No tags found
+
+----
+
+Resulttitle: Tags
+
+----
+
+Noposts: No tags found

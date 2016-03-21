@@ -1,0 +1,25 @@
+Title: Practices: how to Not Do It Yourself
+
+----
+
+Button: What would you suggest?
+
+----
+
+Buttonurl: http://localhost/RICHES-website-kirby/kirby-2.1.1/projects
+
+----
+
+Poloimage: polo03.png
+
+----
+
+Text: Get inspired by the work others have done before you and see how exhibitions and programmes were influenced by new visitors, and how relationships with stakeholders were built to last. European co-creation projects are highlighted and many relevant references can be found.
+
+----
+
+Sectiontwo: 
+
+----
+
+Sectionthree: 1

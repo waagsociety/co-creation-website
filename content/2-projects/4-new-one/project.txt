@@ -1,0 +1,37 @@
+Title: New One
+
+----
+
+Coverimage: europeana-19141918-2.jpg
+
+----
+
+Imageslider: 
+
+----
+
+Year: 
+
+----
+
+Location: 
+
+----
+
+By: 
+
+----
+
+Video: 
+
+----
+
+Text: lorem
+
+----
+
+References: lorem
+
+----
+
+Partners: 

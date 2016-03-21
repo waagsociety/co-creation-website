@@ -1,0 +1,25 @@
+Title: New Post
+
+----
+
+Date: 2015-11-11
+
+----
+
+Author: admin
+
+----
+
+Coverimage: 
+
+----
+
+Category: 
+
+----
+
+Tags: 
+
+----
+
+Text: Some words

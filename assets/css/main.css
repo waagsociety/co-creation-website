@@ -1,0 +1,1240 @@
+/*
+
+Adapted from the Kirby Starterkit by Bastian Allgeier / Sascha Lack
+Pure CSS Parallax Scroll from the wonderful work of Keith Clark
+
+Author: Waag Society
+URL:    waag.org
+
+*/
+
+/* General Styles 
+-------------------------------------------------- */
+
+/* Styles Only for the Parallax Homepage */
+body.home, html.home {
+    overflow: hidden;
+  }
+
+body.home { 
+  margin:0;
+  padding:0;
+  perspective: 1px;
+  transform-style: preserve-3d;
+  height: 100%;
+  background-color: transparent;
+}
+
+/* Other Styles */
+.page {
+  padding: 50px 0 50px 0;
+  margin: 0 auto;
+}
+
+.center {
+  margin: 0 auto;
+  max-width: 75%;
+}
+
+/* Source Sans Pro 
+-------------------------------------------------- */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 300;
+  src: url(../fonts/sourcesanspro-300.woff) format('woff');
+}
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/sourcesanspro-400.woff) format('woff');
+}
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 600;
+  src: url(../fonts/sourcesanspro-600.woff) format('woff');
+}
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: italic;
+  font-weight: 400;
+  src: url(../fonts/sourcesanspro-400-italic.woff) format('woff');
+}
+
+
+/* Reset
+-------------------------------------------------- */
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, main, nav, section, summary {
+  display: block;
+}
+
+
+/* Pix
+-------------------------------------------------- */
+img {
+  display: block;
+  max-width: 100%;
+}
+
+
+/* Links
+-------------------------------------------------- */
+a {
+  color: #FF3E64;
+  text-decoration: none;
+  transition: color .3s, background .3s, border .3s;
+}
+a:hover {
+  color: black;
+  text-decoration: none;
+}
+
+
+/* Clearfix
+-------------------------------------------------- */
+.cf:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* ==========================================================================
+   Custom Styles
+   ========================================================================== */
+
+/* COLOR GUIDE
+    Link Blue: #337AB7;
+    Post-it Background: #FFED00;
+    #F01945
+
+    RICHES Logo Colors
+    
+    Yellow - #dece15
+    Purple - #8b6d9d
+    Red - #cc4331
+    Green - #8dad6e
+    Blue - #74b0ca
+
+
+   ========================================================================== */   
+
+
+/* Headings & Typography
+-------------------------------------------------- */
+html, body {
+  font-family: Helvetica, Arial, sans-serif;
+  text-align: left;
+}
+
+h1, h2, h3, h4 {
+  font-family: Times, 'Times New Roman', serif;
+  font-style: italic;
+  font-weight: bold;
+  color: #F01945;
+}
+
+h1 {
+  font-size: 2em;
+  line-height: 1.25em;
+  font-weight: bold;
+  margin-bottom: .5em;
+}
+h2 {
+  font-size: 2em;
+  line-height: 1.25em;
+  font-weight: bold;
+  margin-bottom: .5em;
+  color:  #FF3E64; 
+}
+h3 {
+  font-size: 1.4em;
+  line-height: 1.5em;
+  font-weight: bold;
+  margin-bottom: .5em;
+}
+h4 {
+  font-size: 1.125em;
+  font-weight: 600;
+  line-height: 1.5em;
+  margin-bottom: .5em;
+  color: red;
+}
+h1 a, h2 a, h3 a, h4 a {
+  color: inherit;
+  border: 0 !important;
+}
+
+.para--content p {
+    font-size: 2rem;
+}
+
+.para--content .post-it-title {
+  color: #FF3E64;
+  font-weight: bold;
+  font-size: 48px;
+}
+
+.post-header {
+  height: 350px;
+  max-height: 350px;
+  background-color: hsla(208, 9%, 37%, 0.5);
+}
+
+.post-title {
+  margin: 0 auto;
+  text-align: center;
+  line-height: 1.75em;
+  position: relative;
+  top: 236px;
+  width: 810px;
+  background-color: white;
+  padding: 45px 20px 30px;
+  max-height: 145px;
+  border-radius: 5px;
+}
+
+.post-title a {
+  font-size: 7rem;
+  color: #FF3E64;
+  text-shadow: 2px 2px 4px hsla(0, 2%, 25%, 0.4);
+}
+
+.post-title a:hover, 
+.post-title a:focus {
+  color: #FFED00; /*yellow*/
+  text-shadow: 2px 2px 4px hsla(0, 0%, 0%, .6);
+  text-decoration: none;
+}
+
+.references {
+  max-width: 700px;
+  margin: 0px auto;
+  color: #666;
+  max-width: 100%;
+  text-align: left;
+}
+
+.references h2 {
+    font-size: 2.25rem;
+}
+
+
+/* Navigation */
+
+.menu li {
+  display: inline-block;
+}
+
+.nav-pills>li {
+    float: right;
+}
+
+.nav-pills>li a {
+    text-transform: uppercase;
+}
+
+.nav {
+  font-size: 1.5rem;a
+  padding-top: .35em;
+}
+
+.navbar-riches {
+  padding: .8em;
+  background-color: #ffffff;
+  border-color: #f4f4f4;
+}
+
+.navbar {
+    margin-bottom: 0px;
+    position: fixed;
+    top: 0;
+}
+
+.navbar-brand {
+  font-family:  Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 20px;
+}
+
+.navbar-brand-image > img {
+  padding-top: 0.35em;
+  max-height: 55px;
+}
+
+.navbar-brand-image {
+  height: auto;
+}
+
+#pager ul {
+  list-style: none;
+}
+
+#pager li a {
+  display: inline-block;
+  padding-left: .5em;
+}
+
+.navbar-default {
+  padding: .8em;
+}
+
+/* Arrow Buttons for Homepage by @jamesdarren
+
+http://codepen.io/jamesdarren/pen/ptHrG
+
+*/
+
+.btn-arrow a {
+  color: #F01945;
+}
+
+.btn-arrow {
+  display: inline-block;
+  margin:0 auto;
+  font-size: 1.75rem;
+  text-decoration:none;
+  color: #F01945;
+  position: absolute;
+  bottom: -29px;
+}
+
+
+.post-it-bg-two .btn-arrow {
+  display: inline-block;
+  margin:0 auto;
+  font-size: 1.75rem;
+  text-decoration:none;
+  color: #F01945;
+  position: absolute;
+  bottom: -29px;
+  left: 309px;
+}
+
+.btn-arrow:before, .btn-arrow:after {
+  display:table-cell;
+  content:' ';
+  border-top: 1.5em solid;
+  border-bottom: 1.5em solid;
+  border-left: 1.5em solid;
+
+}
+
+.btn-arrow:before {
+  position: relative;
+  right: -2px;
+  border-top-color: #FFED00;
+  border-bottom-color: #FFED00;
+  border-left-color:transparent;
+}
+
+.btn-arrow:after {
+  position: relative;
+  right: 2px;
+  border-top-color:transparent;
+  border-bottom-color:transparent;
+  border-left-color: #FFED00;
+}
+
+.btn-arrow span {
+  display:table-cell;
+  vertical-align:middle;
+  background-color: #FFED00;
+  padding:0 .5em 0 1em;
+}
+
+/* hover */
+.btn-arrow:hover span {
+  background-color:#333; 
+  color: white;
+}
+.btn-arrow:hover:before {
+  position: relative;
+  right: -2px;
+  border-top-color:#333;
+  border-bottom-color:#333;
+}
+.btn-arrow:hover:after {
+  position: relative;
+  right: 2px;
+  border-left-color:#333;
+}
+.btn-arrow:hover a { 
+  color: white;
+}
+
+/* Post-it styles */
+
+
+.post-it-bg {
+  /*background-color: #FFED00;*/
+  background-color: white;
+  box-shadow: 2px 2px 5px #404040;
+  padding: 30px;
+  z-index: 50;
+  min-height: 420px;
+}
+
+.post-it-bg-two {
+  /*background-color: #FFED00;*/
+  background-color: white;
+  box-shadow: 2px 2px 5px #404040;
+  padding: 30px;
+   z-index: 50;
+   min-height: 420px;
+}
+
+
+.content {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 21px;
+  text-align: left;
+}
+
+.content-right {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 21px;
+  text-align: right;
+}
+
+.content h1,
+.content-right h1 {
+  font-size: 63px;
+}
+
+/* Articles and Best Practices */
+
+.post-thumbnail {
+  background-size: cover;
+  min-height: 250px;
+  min-width: 250px;
+  max-width: 29%;
+}
+
+.post-excerpt {
+  max-width: 70%;
+}
+
+.post-background {
+  background:  url('../images/background02.png') center fixed;
+}
+
+.practices-background {
+  background-color: white;
+}
+
+.featured-image {
+    padding: 0;
+    min-height: 350px;
+    max-height: 350px; 
+    margin: 0;
+    color: black;
+    background: transparent center fixed;
+    background-size: cover;
+    box-shadow: inset #404040 0px -2px 5px
+}
+
+.blank-page {
+  background-color: white;
+  padding: 3em;
+  margin: 20px auto;
+  max-width: 1000px;
+}
+
+.blank-page p {
+  margin: 0 0 2em;
+}
+
+.post-divider {
+  max-width: 600px;
+  padding: 1em;
+  border-top: 2px solid hsl(0, 7%, 94%);
+  margin: 0 auto;
+}
+
+.video {
+  margin: 0 auto;
+  text-align: center;
+  padding-bottom: 1em;
+}
+
+.video iframe {
+  max-width: 100%;
+}
+
+.readability {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.86rem;
+  text-align: left;
+}
+
+.readability ul {
+  margin: 0em 0em 2em 1.5em;
+}
+
+.readability ul li {
+  margin-bottom: .5em;
+}
+
+.sources {
+    padding: 2em;
+    font-size: 1.25rem;
+    background-color: rgb(238, 238, 238);
+    margin-bottom: 1em;
+    border-radius: 10px;
+}
+
+.text {
+  text-align: left;
+}
+
+.two-col {
+  -moz-column-count: 2;
+  -moz-column-gap: 20px;
+  -webkit-column-count: 2;
+  -webkit-column-gap: 20px;
+}
+
+#post-header {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 0 1em 0;
+  text-align: center;
+}
+
+#post-header .datetime,
+#post-header .author {
+    font-size: 2rem;
+    color: hsl(198, 45%, 62%);
+}
+
+#post-footer {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 0 1em 0;
+}
+
+#post-footer div {
+  display: block;
+  padding: .25em;
+}
+
+.tags ul {
+  list-style: none;
+  margin: .25em;
+}
+
+.tags li {
+  display: inline-block;
+}
+
+.tags a {
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 400;
+  color: hsla(0, 0%, 0%, 0.6);
+  background: hsla(0, 0%, 0%, 0.05);
+  padding: .35em;
+  border-radius: 2px;
+}
+
+.bx-image {
+  margin: 0 auto;
+  min-width: 100%;
+  max-width: 100%;
+}
+
+
+/*FOOTER*/
+
+.cc-image img {
+  max-width: 35px;
+  display: inline-block;
+  margin-top: 40px;
+}
+
+.riches-logo {
+  margin-top: 10px;
+  padding: 1em 0 1em;
+}
+.riches-logo img {
+  max-width: 40%;
+  display: inline-block;
+  margin-left: 70%;
+}
+
+
+/* ----------- MEDIA QUERIES----------- */
+
+@media (min-device-width: 1200px) {
+
+ /* Parallax base styles
+  --------------------------------------------- */
+
+
+  .parallax {
+    height: 500px; /* fallback for older browsers */
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-perspective: 300px;
+    perspective: 300px;
+    -webkit-perspective-origin-x: 100%;
+    perspective-origin-x: 100%;
+  }
+
+  .parallax__group {
+    position: relative;
+    height: 500px; /* fallback for older browsers */
+    height: 100vh;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+  }
+
+
+  .parallax__layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    -webkit-transform-origin-x: 100%;
+    transform-origin-x: 100%;
+  }
+
+  .parallax__layer--fore {
+    -webkit-transform: translateZ(90px) scale(.7);
+    transform: translateZ(90px) scale(.7);
+    z-index: 1;
+  }
+
+  .parallax__layer--base {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    z-index: 4;
+  }
+
+  .parallax__layer--back {
+    -webkit-transform: translateZ(-295px) scale(2);
+    transform: translateZ(-295px) scale(2);
+    z-index: 3;
+  }
+
+  .parallax__layer--deep {
+    -webkit-transform: translateZ(-590px) scale(3);
+    transform: translateZ(-590px) scale(3);
+    z-index: 2;
+  }
+
+
+   /* centre the content in the parallax layers */
+  .para--content {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-45%, -50%);
+    transform: translate(-45%, -50%);
+  }
+
+  .group3 .para--content {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+  .group1 .para--content {
+    position: absolute;
+    left: 50%;
+    top: 52%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+  .para--content--footer {
+    position: absolute;
+    left: 50%;
+    bottom: -71px;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background-color: white;
+    width: 100vw;
+    padding: 2em;
+  }
+
+  .footer-main {
+    margin-top: 2em;
+  }
+
+  /* style the groups
+  --------------------------------------------- */
+
+  #group1 {
+    z-index: 5; /* slide over group 2 */
+  }
+  #group1 .parallax__layer--base {
+    background: url('../images/background01.png')center;
+    background-size: cover;
+  }
+
+
+  #group2 {
+    z-index: 3; /* slide under groups 1 and 3 */
+  }
+
+  #group2 .overlay {
+    min-width: 100vw;
+    min-height: 100vh;
+    background: url('../images/overlay02.png') no-repeat center;
+    -webkit-transform: translateZ(84px) scale(1);
+    transform: translateZ(84px) scale(1);
+    z-index: 1;
+  }
+
+  #group2 .parallax__layer--back {
+    min-width: 100vw;
+    min-height: 100vh;
+    background: url('../images/background02.png');
+    background-size: cover;
+
+  }
+
+  #group3 {
+    z-index: 4; /* slide over group 2 and 4 */
+  }
+  #group3 .parallax__layer--base {
+     background: url('../images/background03.jpg');
+  }
+  #group3 .overlay {
+    width:100vw;
+    height: 100vh;
+    background: url('../images/overlay03.png')center scroll;
+    background-size: cover;
+     -webkit-transform: translateZ(10px) scale(.98);
+    transform: translateZ(10px) scale(.98);
+    z-index: 6;
+  }
+
+  #group4 {
+    z-index: 2; /* slide under group 3 and 5 */
+  }
+  #group4 .parallax__layer--deep {
+    background: url('../images/background04.png')repeat center scroll;
+    background-size: cover;
+  }
+
+  #group5 {
+    z-index: 3; /* slide over group 4 and 6 */
+    box-shadow: 0px -1px 7px #404040;
+  }
+  #group5 .parallax__layer--base {
+    background: url('../images/background05.png')repeat center scroll;
+    background-size: cover;
+  }
+
+  #group6 {
+    z-index: 2; /* slide under group 5 and 7 */
+  }
+  #group6 .parallax__layer--back {
+    background: rgb(245,235,100);
+  }
+
+  #group7 {
+    z-index: 3; /* slide over group 7 */
+  }
+  #group7 .parallax__layer--base {
+    background: rgb(255,241,100);
+  }
+
+  /* Slide 3 -> Slider Styles */
+
+  /* Navigation arrows */
+
+  .nav-arrows span {
+    position: absolute;
+    z-index: 2000;
+    top: 50%;
+    width: 40px;
+    height: 40px;
+    border: 8px solid #ddd;
+    border: 8px solid rgba(150,150,150,0.4);
+    text-indent: -90000px;
+    margin-top: -40px;
+    cursor: pointer;
+    /* Rotate arrows */
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  .nav-arrows span:hover {
+    border-color: rgba(150,150,150,0.9);
+  }
+
+  .nav-arrows span.nav-arrow-prev {
+    left: 5%;
+    border-right: none;
+    border-top: none;
+  }
+
+  .nav-arrows span.nav-arrow-next {
+    right: 5%;
+    border-left: none;
+    border-bottom: none;
+  }
+  /* END Slide 3 */
+
+} 
+/*End MEDIA QUERY PARALLAX*/
+
+
+/* Begin Responsive Styles for Mobile */
+
+@media only screen and (max-width: 768px) {
+
+/* ===============
+    Small Screens
+   =============== */
+
+    .menu-hidden {
+        display: none;
+    }
+
+  .navbar-toggle {
+      display: block;
+  }
+
+  .navbar-toggle {
+      position: relative;
+      float: right;
+      padding: 9px 10px;
+      margin-top: 8px;
+      margin-right: 15px;
+      margin-bottom: 8px;
+      background-image: none;
+      border: 1px solid hsla(0, 0%, 0%, 0);
+  }
+
+  .navbar-toggle .icon-bar {
+      background-color: #FF3E64;
+      display: block;
+      width: 22px;
+      height: 3px;
+      border-radius: 1px;
+  }
+
+}
+
+
+@media (min-width: 100px) and (max-width: 1199px){ 
+  
+
+  body.home, html.home {
+      overflow: auto;
+      color: #040404;
+    }
+
+  body.home { 
+    margin:0;
+    padding:0;
+    perspective: 1px;
+    transform-style: none;
+    height: 100%;
+    background-color: transparent;
+  }
+
+  .navbar-default .navbar-collapse, .navbar-default .navbar-form {
+      border: none;
+  }
+
+  #main-nav {
+    padding-bottom: .35em;
+  }
+
+  #main-nav li a {
+    padding: 1em;
+  }
+
+  #main-nav li {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .parallax {
+      height: auto;
+      overflow-x: hidden;
+      overflow-y: hidden;
+      -webkit-perspective: 0px;
+      perspective: 0px;
+      -webkit-perspective-origin-x: none;
+      perspective-origin-x: none;
+      padding: 50px 0 0 0;
+  }
+
+         
+  /************************
+    
+      RICHES Color Guide
+
+      Yellow - #dece15
+      Purple - #8b6d9d
+      Red - #bd5343
+      Green - #8dad6e
+      Blue - #74b0ca
+
+  *************************/
+
+    .para--content .post-it-title {
+      font-family: Times, 'Times New Roman', serif;
+      font-style: italic;
+      font-weight: bold;
+      font-size: 48px;
+      text-transform: none;
+    }
+
+    .post-it-title a,
+    .post-it-title a:focus {
+      color: #040404;
+      text-decoration: none;
+    }
+
+    .post-it-title a:hover {
+      color: #ffffff;
+    }
+
+    btn-arrow a {
+      color: white;
+    }
+
+    .btn-arrow {
+      display: block;
+       margin: 20px auto;
+      font-size: 2rem;
+      text-decoration:none;
+      color:#fff;
+      position: relative;
+      bottom: 0px;
+      border: 1px solid #000;
+      border-radius: 10px;
+    }
+
+    .post-it-bg-two .btn-arrow {
+      display: block;
+      margin: 20px auto;
+      font-size: 2rem;
+      text-decoration:none;
+      color:#fff;
+      position: relative;
+      bottom: 0px;
+      left: 0px;
+    }
+
+  .btn-arrow:before, .btn-arrow:after {
+    display: inline-block;
+    content:' ';
+    border-top: .5em solid;
+    border-bottom: .5em solid;
+    border-left: .5em solid;
+
+  }
+
+  .btn-arrow:before {
+    position: relative;
+    right: 0;
+    border-top-color:transparent;
+    border-bottom-color:transparent;
+    border-left-color:transparent;
+  }
+
+  .btn-arrow:after {
+    position: relative;
+    right: 0;
+    border-top-color:transparent;
+    border-bottom-color:transparent;
+    border-left-color: transparent;
+  }
+
+  .btn-arrow span {
+    display: block;
+    vertical-align: none;
+    background-color: transparent;
+    padding:0 .5em 0 .5em;
+    margin: 0 auto;
+    text-align: center
+  }
+
+  /* hover */
+  .btn-arrow:hover span {
+    background-color: transparent; 
+    color: #333;
+    margin: 0 auto;
+  }
+  .btn-arrow:hover:before {
+    position: relative;
+    right: -2px;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+  }
+  .btn-arrow:hover:after {
+    position: relative;
+    right: 2px;
+    border-left-color: transparent;
+  }
+  .btn-arrow:hover a { 
+    color: #333;
+  }
+
+.parallax__group {
+    position: relative;
+    height: 100vh;
+    transform-style: none;
+}
+
+  #group1, #group2, #group3, #group4 {
+    z-index: 1;
+    display: block;
+    margin: 0;
+    min-height: 500px;
+  }
+
+  #group5 {
+    z-index: 1;
+    display: block;
+    margin: 0;
+    height: 200px;
+   }
+
+  #group1 {
+    background-color: #74b0ca;
+    background-image: radial-gradient(300px at 50% 50% , #A6E2EC 25%, #86C4D2 60%, #74B0CA);
+    } 
+
+  #group2 {
+    background-color: #8dad6e;
+    background-image: radial-gradient(300px at 50% 50% , #AED787 25%, #A4C980 60%, #8DAD6E);
+    }
+
+  #group3 {
+    background-color: #dece15;
+    background-image: radial-gradient(300px at 50% 50% , #F5E851 25%, #F0E23B 60%, #DECE15);
+    } 
+
+  #group4 {
+   background-color: #8b6d9d;
+   background-image: radial-gradient(300px at 50% 50% , #BFA3CF 25%, #AA86C0 60%, #8B6D9D);
+  } 
+
+  #group1 .parallax__layer--base {
+    background: transparent;
+    background-size: cover;
+  }
+
+  #group2 .overlay {
+    min-width: auto;
+    min-height: auto;
+    background: transparent;
+    -webkit-transform: none;
+    transform: none;
+    z-index: 1;
+  }
+
+  #group2 .parallax__layer--back {
+    display: none;
+  }
+
+  #group3 .parallax__layer--base {
+     background: transparent;
+  }
+  #group3 .overlay {
+    width: auto;
+    height: auto;
+    background: transparent;
+    background-size: cover;
+     -webkit-transform: none;
+    transform: none;
+    z-index: 1;
+  }
+
+  .group3 .para--content {
+    position: relative;
+    left: 0;
+    top: 0;
+     -webkit-transform: none;
+    transform: none;
+  }
+
+  #group4 .parallax__layer--deep {
+    background: transparent;
+    background-size: cover;
+  }
+
+  #group5 {
+    z-index: 1; /* slide over group 4 and 6 */
+    box-shadow: none;
+  }
+  #group5 .parallax__layer--base {
+    background: transparent;
+    background-size: cover;
+  }
+
+  .slide.parallax__group {
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .post-it-bg {
+    background-color: transparent;
+    box-shadow: none;
+    padding: 0px;
+    -webkit-transform: rotate(0deg);
+     -moz-transform: rotate(0deg);
+     -ms-transform: rotate(0deg);
+     -o-transform: rotate(0deg);
+     transform: rotate(0deg);
+     z-index: 1;
+     min-height: 420px;
+     padding: 1em;
+     margin: 0 auto;
+     max-width: 700px;
+  }
+
+  .post-it-bg-two {
+    background-color: transparent;
+    box-shadow: none;
+    padding: 0px;
+    -webkit-transform: rotate(0deg);
+     -moz-transform: rotate(0deg);
+     -ms-transform: rotate(0deg);
+     -o-transform: rotate(0deg);
+     transform: rotate(0deg);
+     z-index: 1;
+     min-height: 420px;
+     padding: 1em;
+     margin: 0 auto;
+     max-width: 700px;
+  }
+
+  .polo {
+    display: none;
+  }
+
+  .para--content {
+     position: relative; 
+     margin: 0 auto;
+     left: 0; 
+     top: 0; 
+     -webkit-transform: none; 
+     transform: none; 
+     padding: 1em;
+  }
+
+  .group1 .para--content {
+    position: relative;
+    display: block;
+    left: 0;
+    top: 0;
+    -webkit-transform: none;
+    transform: none;
+  }
+
+  .para--content .col-md-6 {
+      float: none;
+      width: auto;
+  }
+
+  .content-right {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 21px;
+    position: relative;
+    text-align: left;
+  }
+
+  .parallax__group {
+    position: relative;
+    min-height: 500px;
+    height: auto;
+    -webkit-transform-style: none;
+    transform-style: none;
+  }
+
+  .parallax__layer--fore {
+      -webkit-transform: none;
+      transform: none;
+      z-index: 1;
+  }
+
+  .parallax__layer {
+      position: relative;
+      display: block;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      -webkit-transform-origin-x: none;
+      transform-origin-x: none;
+      margin-bottom: 0;
+  }
+
+  footer.parallax__group,
+  footer.slide.parallax__group {
+    position: relative;
+    min-height: 0px;
+    height: auto;
+    -webkit-transform-style: none;
+    transform-style: none;
+  }
+
+  .para--content--footer {
+      position: relative;
+      left: 0;
+      bottom: 0;
+      -webkit-transform: none;
+      transform: none;
+      background-color: transparent;
+      width: auto;
+      padding: 2em;
+  }
+
+  .post-title a {
+    font-size: 6rem;
+    color: white;
+    text-shadow: 2px 2px 4px hsla(0, 2%, 25%, 0.4);
+  }
+
+  .post-thumbnail {
+    display: none;
+  }
+
+  .post-excerpt {
+    width: auto;
+    max-width: 100%;
+  }
+
+  .post-excerpt h1 {
+    text-align: left;
+  }
+
+}
+/* End Responsive */
+
+
+
+
+
+
+
